@@ -1,0 +1,45 @@
+
+.hero {
+  background: var(--bg-light);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.hero-name {
+  font-size: clamp(80px, 10vw, 160px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -4px;
+  margin: 0;
+}
+
+.hero-email {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: url('/avatar.jpg') center/cover no-repeat;
+  margin-bottom: 40px;
+}
+
+.hero-description {
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 500px;
+}

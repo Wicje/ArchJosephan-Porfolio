@@ -1,0 +1,52 @@
+
+.works {
+  background: var(--bg-light);
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+
+.cube-wrapper {
+  perspective: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: transform 0.6s ease;
+}
+
+.cube:hover {
+  transform: rotateY(30deg);
+}
+
+.face {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.front { transform: translateZ(200px); background: url('/work1.jpg'); }
+.back { transform: rotateY(180deg) translateZ(200px); background: url('/work2.jpg'); }
+.left { transform: rotateY(-90deg) translateZ(200px); background: url('/work3.jpg'); }
+.right { transform: rotateY(90deg) translateZ(200px); background: url('/work4.jpg'); }
+
+.works-btn {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 18px 40px;
+  border: none;
+  cursor: pointer;
+}

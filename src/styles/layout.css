@@ -1,0 +1,15 @@
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-dark {
+  background: var(--bg-dark);
+  color: var(--text-invert);
+}

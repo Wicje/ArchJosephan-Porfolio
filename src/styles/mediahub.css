@@ -1,0 +1,29 @@
+
+.mediahub {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.mediahub h2 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.media-card {
+  background: #111;
+  padding: 60px 40px;
+  border: 1px solid #222;
+  transition: transform 0.4s ease, border 0.4s ease;
+  cursor: pointer;
+}
+
+.media-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
