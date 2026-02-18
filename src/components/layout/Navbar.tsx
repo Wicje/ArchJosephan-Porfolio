@@ -1,8 +1,9 @@
 
 "use client";
-
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../../styles/navbar.css";
+
 
 const containerVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -23,10 +24,24 @@ const itemVariants = {
 };
 
 export default function Navbar() {
+
+
+const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   return (
     <>
-      <motion.nav
-        className="navbar"
+      
+<motion.nav
+  className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}
         variants={containerVariants}
         initial="hidden"
         animate="show"
