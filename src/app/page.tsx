@@ -1,20 +1,17 @@
-import "../styles/globals.css";
-import "../styles/variables.css";
-import "../styles/layout.css";
+import Hero from "@/components/sections/Hero";
+import Works from "@/components/sections/Works";
+import About from "@/components/sections/About";
+import References from "@/components/sections/References";
+import MediaHub from "@/components/sections/MediaHub";
 
-export const metadata = {
-  title: "Josephan — Creative Architect",
-  description: "Developer, Tech Lead, Creative Architect",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <>
+      <Hero />
+      <Works />
+      <About />
+      
+      <MediaHub />
+    </>
   );
 }
