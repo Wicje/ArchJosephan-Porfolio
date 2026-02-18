@@ -16,7 +16,7 @@
 .about-title {
   font-size: clamp(36px, 4vw, 64px);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0 0 60px 0;
   max-width: 900px;
 }
@@ -37,15 +37,15 @@
 
 .about-image {
   width: 100%;
-  height: 500px;
+  height: 400px;
   background: url('/about.jpg') center/cover no-repeat;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .about-text {
-  font-size: 38px;
-  line-height: 1.7;
-  max-width: 500px;
+  font-size: 24px;
+  line-height: 1.3;
+  max-width: 900pxx;
 }
 
 .glass-btn {

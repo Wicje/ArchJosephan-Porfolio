@@ -1,39 +1,76 @@
-// src/components/About.tsx
-import React from "react";
-import "../../styles/about.css"; // make sure the path is correct
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import "../../styles/about.css";
 
 export default function About() {
-  return (
-    <section className="section about">
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-      {/* Top row: title + glass button */}
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const splitText = (text: string) =>
+    text.split("").map((char, index) => (
+      <motion.span
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ delay: index * 0.05 }}
+      >
+        {char}
+      </motion.span>
+    ));
+
+  return (
+    <section className="section about" ref={ref}>
+      
+      {/* Top row */}
       <div className="about-super">
         <h2>about.</h2>
         <button className="glass-btn">Read CV</button>
       </div>
 
       {/* Main content */}
-      <div className="container about-grid">
+      <motion.div
+        className="container about-grid"
+        variants={container}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
+      >
 
-        {/* Bold big heading */}
+        {/* Bold headline with typing animation */}
         <div className="about-heading">
           <h2 className="about-title">
-            I build visually stunning interfaces backed by solid engineering architecture that has contributed to society one way or another.
+            {splitText(
+              "I build visually stunning interfaces backed by solid engineering architecture that has contributed to society one way or another."
+            )}
           </h2>
         </div>
 
         {/* Image */}
-        <div className="about-image"></div>
+        <motion.div className="about-image" variants={item}></motion.div>
 
         {/* Text beside image */}
-        <div className="about-text">
+        <motion.div className="about-text" variants={item}>
           I believe in building leverage.<br />
-          Teams, products, ecosystems.<br />
-          Strategy meets execution.
-        </div>
+          Teams, Products, Ecosystems, Communities.<br />
+          Strategy meets and defines execution.
+        </motion.div>
 
-      </div>
-
+      </motion.div>
     </section>
   );
 }
