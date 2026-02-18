@@ -1,52 +1,80 @@
-
 .works {
+  position: relative;
   background: var(--bg-light);
+  min-height: 100vh;
+  padding: 120px 0;
+  overflow: hidden;
 }
 
 .section-title {
   font-size: 28px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  text-align: start;
 }
 
+/* Cube Wrapper */
 .cube-wrapper {
-  perspective: 1200px;
   position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: 500px;   /* force render space */
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 1200px;
+  margin: 0 auto;
 }
 
+/* Cube */
 .cube {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateY(-30deg);
-  transition: transform 0.6s ease;
 }
 
-.cube:hover {
-  transform: rotateY(30deg);
-}
-
+/* Faces */
 .face {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
+
   background-size: cover;
   background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.front { transform: translateZ(200px); background: url('/work1.jpg'); }
-.back { transform: rotateY(180deg) translateZ(200px); background: url('/work2.jpg'); }
-.left { transform: rotateY(-90deg) translateZ(200px); background: url('/work3.jpg'); }
-.right { transform: rotateY(90deg) translateZ(200px); background: url('/work4.jpg'); }
 
+.front  { transform: translateZ(150px); background-image: url('/work1.jpg'); }
+.back   { transform: rotateY(180deg) translateZ(150px); background-image: url('/work2.jpg'); }
+.left   { transform: rotateY(-90deg) translateZ(150px); background-image: url('/work3.jpg'); }
+.right  { transform: rotateY(90deg) translateZ(150px); background-image: url('/work4.jpg'); }
+.top    { transform: rotateX(90deg) translateZ(150px); background-image: url('/work5.jpg'); }
+.bottom { transform: rotateX(-90deg) translateZ(150px); background-image: url('/work6.jpg'); }
+
+/* Position each face */
+.front  { transform: translateZ(150px); }
+.back   { transform: rotateY(180deg) translateZ(150px); }
+.left   { transform: rotateY(-90deg) translateZ(150px); }
+.right  { transform: rotateY(90deg) translateZ(150px); }
+.top    { transform: rotateX(90deg) translateZ(150px); }
+.bottom { transform: rotateX(-90deg) translateZ(150px); }
+
+/* Button */
 .works-btn {
   position: absolute;
-  background: #000;
-  color: #fff;
-  padding: 18px 40px;
-  border: none;
+  bottom: 40px;
+  padding: 18px 42px;
+  font-size: 26px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  color: black;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.works-btn:hover {
+  transform: translateY(-4px);
 }
