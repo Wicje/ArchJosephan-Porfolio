@@ -38,7 +38,7 @@ export default function CTASection() {
           viewport={{ once: true }}
         >
           <a href="#">LinkedIn</a>
-          <a href="#">Github</a>
+          <a href="https://github.com/Wicje">Github</a>
         </motion.div>
 
         <motion.h2
@@ -59,7 +59,7 @@ export default function CTASection() {
           viewport={{ once: true }}
         >
           <a href="mailto:villainafen@gmail.com" className="cta-email">
-            villainafen@gmail.com
+            anichisom4top@gmail.com
           </a>
 
           <span className="cta-status">
