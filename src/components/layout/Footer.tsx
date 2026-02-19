@@ -1,40 +1,48 @@
+"use client";
 
+import { motion } from "framer-motion";
 import "../../styles/footer.css";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="footer section-dark">
-      <div className="container footer-inner">
+    <section className="footer-cta">
+      
+      {/* MASSIVE CTA TEXT */}
+      <motion.h1
+        className="footer-main-cta"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+        viewport={{ once: true }}
+      >
+        CREATIVE <br />
+        ARCHITECT
+      </motion.h1>
 
-        <div className="footer-cta">
-          <h2>
-            Curious what we can build?
-            <br />
-            Let’s work.
-          </h2>
+      {/* Supporting content */}
+      <motion.div
+        className="footer-inner"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <h2>
+          Work seamlessly with an expert built to move
+          at your speed and deliver beyond what you imagined.
+        </h2>
 
-          <div className="footer-contact">
-            <a href="mailto:you@domain.com" className="footer-email">
-              you@domain.com
-            </a>
+        <button className="footer-btn">
+          Book a call 
+        </button>
+      </motion.div>
 
-            <span className="availability">
-              ● Available for work
-            </span>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <span>All rights reserved © 2026</span>
-
-          <div className="footer-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-          </div>
-        </div>
-
+      {/* Legal links */}
+      <div className="footer-legal">
+        <span>Terms of Service</span>
+        <span>Privacy Policy</span>
       </div>
-    </footer>
+
+    </section>
   );
 }
