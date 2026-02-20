@@ -15,13 +15,13 @@ export default function WorksPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        WORKS
+        WORKS.
       </motion.h1>
 
       <div className="works-hero">
         <div className="works-image">
           <Image
-            src="/workHero.jpg"
+            src="/WorkHero.jpg"
             alt="hero"
             fill
             priority
@@ -30,28 +30,39 @@ export default function WorksPage() {
 
         <div className="works-description">
           <p>
-            For over five years, I worked as a Product Designer at Swivl,
-            closely collaborating with product owners, developers,
-            and marketing teams in a fast-changing environment.
+            For over three Short years, I worked as a Backend Developer at CocoBase,
+            closely collaborating with product owners, developers, designers
+            and marketing teams in a fast-changing environment to make the world a 
+            better place and pave way for more Collaborations.
           </p>
         </div>
       </div>
 
       <div className="works-gallery">
         <div className="gallery-item">
-          <Image src="/work1.jpg" alt="" fill />
+<a
+  href="https://github.com/Wicje/CUC_Consortium#"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="gallery-item"
+>
+  <Image src="/first.png" alt="Fintech Project" fill />
+</a>
         </div>
 
         <div className="gallery-item">
-          <Image src="/work2.jpg" alt="" fill />
+          <Image src="/wk2.jpg" alt="" fill />
         </div>
       </div>
 
-      <button className="behance-btn"
-      href="https://github.com/Wicje?tab=repositories"
-      >
-        More on GitHub
-      </button>
+<a
+  href="https://github.com/Wicje?tab=repositories"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="behance-btn"
+>
+  More on GitHub
+</a>
 
     </section>
   );
