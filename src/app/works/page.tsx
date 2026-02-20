@@ -47,8 +47,10 @@ export default function WorksPage() {
         </div>
       </div>
 
-      <button className="behance-btn">
-        More on Behance
+      <button className="behance-btn"
+      href="https://github.com/Wicje?tab=repositories"
+      >
+        More on GitHub
       </button>
 
     </section>

@@ -25,7 +25,7 @@ const itemVariants = {
 };
 
 export default function Navbar() {
-
+const MotionLink = motion(Link);
 
 const [scrolled, setScrolled] = useState(false);
 
@@ -52,17 +52,43 @@ useEffect(() => {
             Josephan
           </motion.div>
 
-          <div className="nav-links">
-            {["Works", "Media", "CV", "Twitter"].map((item) => (
-              <motion.a
-                key={item}
-                variants={itemVariants}
-                href="#"
-              >
-                {item}
-              </motion.a>
-            ))}
-          </div>
+          
+<div className="nav-links">
+
+  <MotionLink
+    href="/works"
+    variants={itemVariants}
+    className="nav-link"
+     whileHover={{ y: -3, opacity: 0.6 }}
+  >
+    Works
+  </MotionLink>
+
+  <MotionLink
+    href="/media"
+    variants={itemVariants}
+    className="nav-link"
+  >
+    Media
+  </MotionLink>
+
+  <MotionLink
+    href="/cv"
+    variants={itemVariants}
+    className="nav-link"
+  >
+    CV
+  </MotionLink>
+
+  <MotionLink
+    href="/twitter"
+    variants={itemVariants}
+    className="nav-link"
+  >
+    Twitter
+  </MotionLink>
+
+</div>
         </div>
       </motion.nav>
 
