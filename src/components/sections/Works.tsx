@@ -2,8 +2,11 @@
 
 import "../../styles/works.css";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function Works() {
+  const router = useRouter();
+
   return (
     <section className="section works">
       <div className="container">
@@ -29,7 +32,9 @@ export default function Works() {
             <div className="face bottom" />
           </motion.div>
 
-          <button className="works-btn">
+          <button className="works-btn"
+          onClick={() => router.push("/works")}
+          >
             View my works
           </button>
 

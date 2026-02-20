@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../../styles/navbar.css";
+import Link from "next/link";
 
 
 const containerVariants = {
