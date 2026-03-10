@@ -3,13 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/mediahub.css";
 import { Variants } from "framer-motion";
+import Link from "next/link";
 
 const contentData = [
   {
-    category: "Social media",
+    category: "Twitter",
     imgClass: "img-social",
-    desc: "(Almost) weekly, I create content around graphic design. Whether that be tips & tricks I've picked up along the way or the process for a brand I've designed; I'll always show up for the design",
+    desc: "(Almost) weekly, I create content around Software design. Whether that be tips & tricks I've picked up along the way or the process for companies i have worked with; I'll always show up for the work",
     btn: "FOLLOW ME",
+    link: "https://twitter.com/ArchJosephan",
   },
   {
     category: "Newsletter",
@@ -18,28 +20,31 @@ const contentData = [
     btn: null,
   },
   {
-    category: "ChittChat",
+    category: "ArchJosephan",
     imgClass: "img-chitchat",
-    desc: "Every month(ish), on YouTube, I interview creatives from all across the world to learn about their story, approach to their craft and ultimately to share knowledge with the design community.",
+    desc: "Every month(ish), on YouTube, I interview Developer from all across the world to learn about their story, approach to their craft and ultimately to share knowledge with the dev community.",
     btn: "SUBSCRIBE",
+    link: "https://youtube.com/yourchannel",
   },
   {
     category: "Talks",
     imgClass: "img-talks",
-    desc: "I was lucky enough to be invited to share my story and tips on landing higher ticket clients at Squarespace's Circle Day 2025.",
+    desc: "I was lucky enough to be invited to share my story and tips on landing higher ticket clients at SuperTeam Summit.",
     btn: "WATCH MY TALK",
+    link: "https://youtube.com/talk",
   },
   {
     category: "Podcasts",
     imgClass: "img-podcasts",
     desc: (
       <>
-        I sat down with one of my best mates and fellow designer{" "}
-        <span className="highlight-link">CJ Cawley</span> to chat through my
-        design journey so far.
+        I sat down with one of my best mates and fellow developer{" "}
+        <span className="highlight-link">CJ Young</span> to chat through my
+        dev journey so far.
       </>
     ),
     btn: "WATCH/LISTEN",
+     link: "https://spotify.com/podcast",
   },
 ];
 
@@ -98,7 +103,11 @@ export default function MediaHub() {
 
                 <div className="media-content">
                   <p>{item.desc}</p>
-                  {item.btn && <button>{item.btn}</button>}
+                  {item.btn && item.link && (
+                     <Link href={item.link} target="_blank">
+                      <button>{item.btn}</button>
+                       </Link>
+                    )}
                 </div>
               </motion.div>
             </motion.div>
