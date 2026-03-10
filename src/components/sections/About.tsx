@@ -41,7 +41,9 @@ export default function About() {
       {/* Top row */}
       <div className="about-super">
         <h2>about.</h2>
+        <a href="https://drive.google.com/file/d/1sdJIcCYXI4e33Bt8Urr1xeLOnT3uACrA/view?usp=sharing" target="_blank">
         <button className="glass-btn">Read CV</button>
+        </a>
       </div>
 
       {/* Main content */}

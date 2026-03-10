@@ -65,7 +65,7 @@ useEffect(() => {
   </MotionLink>
 
   <MotionLink
-    href="/media"
+    href="https://github.com/Wicje"
     variants={itemVariants}
     className="nav-link"
   >
@@ -73,7 +73,7 @@ useEffect(() => {
   </MotionLink>
 
   <MotionLink
-    href="/cv"
+    href="https://drive.google.com/file/d/1sdJIcCYXI4e33Bt8Urr1xeLOnT3uACrA/view?usp=sharing"
     variants={itemVariants}
     className="nav-link"
   >
@@ -81,7 +81,7 @@ useEffect(() => {
   </MotionLink>
 
   <MotionLink
-    href="/twitter"
+    href="https://x.com/ArchJosephan/"
     variants={itemVariants}
     className="nav-link"
   >
