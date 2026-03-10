@@ -50,35 +50,40 @@
 /* Specific Aspect Ratios & Placeholders mimicking the screenshot */
 .img-social {
   aspect-ratio: 4 / 5;
-  background-color: #0b6f5d; 
+  background-image: url("/mediahub/recording.png");
 }
 
 .img-newsletter {
-  aspect-ratio: 9 / 14; /* Taller column */
-  background-color: #4c3f8e; 
+  aspect-ratio: 9 / 14;
+  background-image: url("/mediahub/newsletter.png");
+}
+
+.img-chitchat-top {
+  aspect-ratio: 4 / 3;
+  background-image: url("/mediahub/chitchat-top.png");
+}
+
+.img-chitchat-bottom {
+  aspect-ratio: 4 / 3;
+  background-image: url("/mediahub/chitchat-bottom.png");
+}
+
+.img-talks {
+  aspect-ratio: 16 / 9;
+  background-image: url("/mediahub/talks.png");
+}
+
+.img-podcasts {
+  aspect-ratio: 4 / 3;
+  background-image: url("/mediahub/podcasts.png");
 }
 
 .stacked-images {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Slight gap between the stacked YouTube thumbnails */
+  gap: 4px; /* slight gap between the stacked youtube thumbnails */
 }
 
-.img-chitchat-top, 
-.img-chitchat-bottom {
-  aspect-ratio: 4 / 3;
-  background-color: #3b4e61;
-}
-
-.img-talks {
-  aspect-ratio: 16 / 9;
-  background-color: #c9c0b1;
-}
-
-.img-podcasts {
-  aspect-ratio: 4 / 3;
-  background-color: #1e1e1e;
-}
 
 /* Content & Typography */
 .media-content {
