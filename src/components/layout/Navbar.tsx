@@ -6,6 +6,7 @@ import "../../styles/navbar.css";
 import Link from "next/link";
 import { Variants } from "framer-motion";
 
+
 const containerVariants = {
   hidden: { opacity: 0, y: -20 },
   show: {
@@ -28,6 +29,7 @@ export default function Navbar() {
 const MotionLink = motion(Link);
 
 const [scrolled, setScrolled] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
 
 useEffect(() => {
   const handleScroll = () => {
@@ -38,11 +40,17 @@ useEffect(() => {
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
 
+ useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       
 <motion.nav
-  className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}
+        className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -52,47 +60,32 @@ useEffect(() => {
             Josephan
           </motion.div>
 
-          
-<div className="nav-links">
+          {/* Hamburger */}
+          <div
+            className={`hamburger ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
 
-  <MotionLink
-    href="/works"
-    variants={itemVariants}
-    className="nav-link"
-     whileHover={{ y: -3, opacity: 0.6 }}
-  >
-    Works
-  </MotionLink>
-
-  <MotionLink
-    href="https://github.com/Wicje"
-    variants={itemVariants}
-    className="nav-link"
-  >
-    Media
-  </MotionLink>
-
-  <MotionLink
-    href="https://drive.google.com/file/d/1sdJIcCYXI4e33Bt8Urr1xeLOnT3uACrA/view?usp=sharing"
-    variants={itemVariants}
-    className="nav-link"
-  >
-    CV
-  </MotionLink>
-
-  <MotionLink
-    href="https://x.com/ArchJosephan/"
-    variants={itemVariants}
-    className="nav-link"
-  >
-    Twitter
-  </MotionLink>
-
-</div>
+          <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+            <MotionLink href="/works" variants={itemVariants} className="nav-link" whileHover={{ y: -3, opacity: 0.6 }}>
+              Works
+            </MotionLink>
+            <MotionLink href="https://github.com/Wicje" variants={itemVariants} className="nav-link">
+              Media
+            </MotionLink>
+            <MotionLink href="https://drive.google.com/file/d/1sdJIcCYXI4e33Bt8Urr1xeLOnT3uACrA/view?usp=sharing" variants={itemVariants} className="nav-link">
+              CV
+            </MotionLink>
+            <MotionLink href="https://x.com/ArchJosephan/" variants={itemVariants} className="nav-link">
+              Twitter
+            </MotionLink>
+          </div>
         </div>
       </motion.nav>
-
-      <div className="nav-divider" />
     </>
   );
 }

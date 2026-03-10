@@ -82,3 +82,37 @@
   background: #ddd;
   z-index: 999;
 }
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 88px; /* below navbar */
+    right: -100%; /* hide offscreen initially */
+    height: 100vh;
+    width: 70%;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    transition: right 0.3s ease;
+    z-index: 9999;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+
+  .nav-divider {
+    display: none;
+  }
+}
