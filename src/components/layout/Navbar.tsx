@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../../styles/navbar.css";
 import Link from "next/link";
-
+import { Variants } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -14,7 +14,7 @@ const containerVariants = {
     transition: {
       staggerChildren: 0.1,
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const
     },
   },
 };
