@@ -1,8 +1,8 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/mediahub.css";
+import { Variants } from "framer-motion";
 
 const contentData = [
   {

@@ -1,8 +1,7 @@
-
 "use client";
-
 import { motion } from "framer-motion";
 import "../../styles/reference.css";
+import { Variants } from "framer-motion";
 
 const references = [
   {

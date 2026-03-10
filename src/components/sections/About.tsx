@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "../../styles/about.css";
+import { Variants } from "framer-motion";
 
 export default function About() {
   const ref = useRef(null);

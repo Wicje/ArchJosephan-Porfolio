@@ -1,6 +1,4 @@
-
 "use client";
-
 import { motion } from "framer-motion";
 import "../../styles/hero.css";
 import { useEffect, useState } from "react";

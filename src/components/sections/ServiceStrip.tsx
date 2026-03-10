@@ -1,7 +1,7 @@
 "use client";
-
 import "../../styles/services-strip.css";
 import { motion } from "framer-motion";
+
 
 const services = [
   "UX Critic",
