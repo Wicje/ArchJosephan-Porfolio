@@ -58,6 +58,12 @@
   background-image: url("/mediahub/newsletter.png");
 }
 
+.stacked-images {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* slight gap between the stacked youtube thumbnails */
+}
+
 .img-chitchat-top {
   aspect-ratio: 4 / 3;
   background-image: url("/mediahub/chitchat-top.png");
@@ -78,11 +84,6 @@
   background-image: url("/mediahub/podcasts.png");
 }
 
-.stacked-images {
-  display: flex;
-  flex-direction: column;
-  gap: 4px; /* slight gap between the stacked youtube thumbnails */
-}
 
 
 /* Content & Typography */

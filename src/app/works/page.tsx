@@ -1,9 +1,31 @@
-
 "use client";
-
 import "./works.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
+const projects = [
+  {
+    src: "/firs.png",
+    alt: "3d-Project",
+    link: "https://memory-tunnel-eight.vercel.app/",
+  },
+  {
+    src: "/wk2.png",
+    alt: "tidy",
+    link: "https://tidy-jet.vercel.app/",
+  },
+
+  {
+    src: "/ton.png",
+    alt: "Designer-portfolio",
+    link: "https://brandit-folio.vercel.app/",
+  },
+  {
+    src: "/wk2.png",
+    alt: "tidy",
+    link: "https://tidy-jet.vercel.app/",
+  },
+];
 
 export default function WorksPage() {
   return (
@@ -38,22 +60,19 @@ export default function WorksPage() {
         </div>
       </div>
 
-      <div className="works-gallery">
-        <div className="gallery-item">
-<a
-  href="https://github.com/Wicje/CUC_Consortium#"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="gallery-item"
->
-  <Image src="/first.png" alt="Fintech Project" fill />
-</a>
-        </div>
-
-        <div className="gallery-item">
-          <Image src="/wk2.jpg" alt="" fill />
-        </div>
-      </div>
+<div className="works-gallery">
+  {projects.map((project, i) => (
+    <a
+      key={i}
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="gallery-item"
+    >
+      <Image src={project.src} alt={project.alt} fill />
+    </a>
+  ))}
+</div>
 
 <a
   href="https://github.com/Wicje?tab=repositories"

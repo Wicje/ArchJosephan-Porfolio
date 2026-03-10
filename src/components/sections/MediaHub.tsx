@@ -17,7 +17,9 @@ const contentData = [
     category: "Newsletter",
     imgClass: "img-newsletter",
     desc: "Along with my design content across social media, I also write a sort-of-monthly newsletter",
-    btn: null,
+    btn: "FOLLOW ME",
+    link: "https://twitter.com/ArchJosephan",
+
   },
   {
     category: "ArchJosephan",
