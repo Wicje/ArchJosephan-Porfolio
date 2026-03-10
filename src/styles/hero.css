@@ -85,3 +85,55 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    column-gap: 0;
+    row-gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hero-name {
+    font-size: clamp(40px, 12vw, 80px);
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+
+  .hero-email {
+    font-size: 18px;
+    text-align: center;
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center;
+    grid-column: unset;
+    grid-row: unset;
+    justify-self: unset;
+    align-self: unset;
+  }
+
+  .hero-avatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+    grid-column: unset;
+    grid-row: unset;
+    justify-self: unset;
+    align-self: unset;
+  }
+
+  .hero-left,
+  .hero-right {
+    display: block;
+  }
+}
